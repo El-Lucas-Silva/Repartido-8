@@ -12,12 +12,13 @@ public class Support extends Campeon {
     //Metodos
 
     int ataqueEspecial() {
-        if (this.salud >= 100) {
-            this.salud = 100;
+        if (getSalud() >= 100) {
+            setSalud(100);
         } else {
-            this.salud += this.curacion;
+            setSalud(getSalud() + this.curacion);
         }
-        System.out.println(this.nombre + " regenero "+ this.curacion +" puntos de Salud | Salud: " + this.salud);
+        System.out.println(this.nombre +" utilizo un Ataque Especial! | Daño infringido: "+ super.ataqueEspecial());
+        System.out.println(this.nombre + " regenero "+ this.curacion +" puntos de Salud | Salud: " + getSalud());
         return super.ataqueEspecial();
     }
 

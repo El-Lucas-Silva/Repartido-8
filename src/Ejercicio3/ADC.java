@@ -12,6 +12,7 @@ public class ADC extends Campeon {
     //Metodos
 
     int atacar() {
+        System.out.println(this.nombre +" Ataca! | Daño infringido: "+ super.atacar() + (rango / 4));
         return super.atacar() + (rango / 4);
     }
 

@@ -15,13 +15,17 @@ public class TopLaner extends Campeon {
         int danioFinal = danio - (this.resistencia / 10);
 
         if (danioFinal <= 0) {
-            System.out.println(this.nombre + " Recibio un ataque tan debil que su salud no bajo | Salud: " + this.salud);
-        } else if (this.salud <= 0) {
-            this.salud = 0;
+            System.out.println(this.nombre + " recibio un ataque tan debil que su salud no bajo | Salud: " + getSalud());
+        } else if (getSalud() <= 0) {
+            setSalud(0);
+            System.out.println(this.nombre +"ha sido eliminado.");
         } else {
-            this.salud -= danioFinal;
+            setSalud(getSalud() - danioFinal);
+            if (getSalud() <= 0){
+                setSalud(0);
+            }
+            System.out.println(this.nombre + " ha recibido "+ danioFinal +" de daño | Salud: " + getSalud());
         }
-        System.out.println(this.nombre + " ha recibido "+ danioFinal +" de daño | Salud: " + this.salud);
     }
 
     @Override

@@ -12,6 +12,7 @@ public class Jungla extends Campeon {
     //Metodos
 
     int ataqueEspecial() {
+        System.out.println(this.nombre +" utilizo un Ataque Especial! | Daño infringido: "+ super.ataqueEspecial() + (controlMapa / 5));
         return super.ataqueEspecial() + (controlMapa / 5);
     }
 

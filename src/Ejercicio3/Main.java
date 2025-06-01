@@ -14,7 +14,7 @@ public class Main {
         equipo1[2] = new ADC("Jinx",  60, 60, 55, 25);
 
         equipo2[0] = new Jungla("Lee Sin",  65, 60, 65, 45);
-        equipo2[1] = new Support("Tresh",  40, 80, 30, 50);
+        equipo2[1] = new Support("Tresh",  45, 80, 30, 50);
         equipo2[2] = new MidLaner("Lux",  55, 55, 60, 38);
 
         System.out.println("============================================================");
@@ -31,7 +31,7 @@ public class Main {
 
         //Batalla
         while (equipoSigueVivo(equipo1) && equipoSigueVivo(equipo2)) {
-            // Turno del equipo 1
+            //Turno del equipo 1
             if (equipoSigueVivo(equipo1) && equipoSigueVivo(equipo2)) {
                 Campeon atacante = obtenerVivoAleatorio(equipo1, rand);
                 Campeon defensor = obtenerVivoAleatorio(equipo2, rand);
@@ -41,7 +41,7 @@ public class Main {
                 System.out.println("------------------------------------------------------------");
             }
 
-            // Turno del equipo 2
+            //Turno del equipo 2
             if (equipoSigueVivo(equipo1) && equipoSigueVivo(equipo2)) {
                 Campeon atacante = obtenerVivoAleatorio(equipo2, rand);
                 Campeon defensor = obtenerVivoAleatorio(equipo1, rand);
@@ -52,7 +52,7 @@ public class Main {
             }
         }
 
-        // Resultados de la pelea
+        //Resultados de la pelea
         if (equipoSigueVivo(equipo1)) {
             System.out.println("+-----------------------+");
             System.out.println("|¡El EQUIPO 1 ha ganado!|");
